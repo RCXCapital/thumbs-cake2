@@ -101,7 +101,6 @@ class ThumbsController extends ThumbsAppController
 	{
 		$thumbDir = dirname($this->getCachedFilePath());
 		if(!file_exists($thumbDir)) {
-            debug(new Folder());
 			$folder = new Folder();
 			$folder->create($thumbDir);
 		}
