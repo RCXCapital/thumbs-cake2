@@ -128,7 +128,7 @@ class ThumbsController extends ThumbsAppController
 		} else {
 			throw new Exception('Thumbnail parameters error');
 		}
-
+        $src = (isset($src)) ? str_replace('%20',' ',$src) : null;
 		if(file_exists(WWW_ROOT . $src)) {
 			$this->source = $src;
 		} else {
