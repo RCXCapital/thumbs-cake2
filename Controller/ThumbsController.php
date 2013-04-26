@@ -53,7 +53,7 @@ class ThumbsController extends ThumbsAppController
 	public function beforeFilter()
 	{
         if($this->Auth) {
-            $this->Auth->allow('*');
+            $this->Auth->allow();
         }
 		$this->cacheDirectory = WWW_ROOT . 'thumbs' . DS;
 		$this->defaultImage = 'img' . DS . 'no_image' . DS . 'default_img.jpg';
