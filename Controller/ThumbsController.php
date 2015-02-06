@@ -132,7 +132,9 @@ class ThumbsController extends ThumbsAppController
 		if(file_exists(WWW_ROOT . $src)) {
 			$this->source = $src;
 		} else {
-			$this->source = $this->defaultImage;
+            $this->source = (isset($this->request->query['defaultimage']))?
+                'img' . DS . 'no_image' . DS . $this->request->query['defaultimage'] . '.png':
+                $this->defaultImage;
 		}
 
 		$this->width = !empty($width) ? $width : 0;
