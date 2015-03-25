@@ -178,5 +178,7 @@ class ThumbsController extends ThumbsAppController
 
 			$img->show();
 		}
+
+		exit();
 	}
 }
